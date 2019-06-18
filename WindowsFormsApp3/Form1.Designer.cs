@@ -33,14 +33,15 @@
             this.startToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.TxtName = new System.Windows.Forms.TextBox();
+            this.TxtLives = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.LblPoints = new System.Windows.Forms.Label();
             this.LblPts = new System.Windows.Forms.Label();
             this.LblLives = new System.Windows.Forms.Label();
             this.LblName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.LblPoints = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.TxtLives = new System.Windows.Forms.TextBox();
-            this.TxtName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -80,6 +81,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.TxtName);
             this.panel1.Controls.Add(this.TxtLives);
             this.panel1.Controls.Add(this.button1);
@@ -92,6 +94,41 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(158, 510);
             this.panel1.TabIndex = 2;
+            // 
+            // TxtName
+            // 
+            this.TxtName.Location = new System.Drawing.Point(31, 76);
+            this.TxtName.Name = "TxtName";
+            this.TxtName.Size = new System.Drawing.Size(100, 20);
+            this.TxtName.TabIndex = 7;
+            // 
+            // TxtLives
+            // 
+            this.TxtLives.Location = new System.Drawing.Point(31, 150);
+            this.TxtLives.Name = "TxtLives";
+            this.TxtLives.Size = new System.Drawing.Size(100, 20);
+            this.TxtLives.TabIndex = 6;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Papyrus", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(31, 270);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(99, 49);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Reset";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // LblPoints
+            // 
+            this.LblPoints.BackColor = System.Drawing.Color.White;
+            this.LblPoints.Font = new System.Drawing.Font("Papyrus", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPoints.Location = new System.Drawing.Point(33, 218);
+            this.LblPoints.Name = "LblPoints";
+            this.LblPoints.Size = new System.Drawing.Size(98, 28);
+            this.LblPoints.TabIndex = 4;
+            this.LblPoints.Text = "0";
+            this.LblPoints.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // LblPts
             // 
@@ -133,40 +170,15 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "StarShip Troopers";
             // 
-            // LblPoints
+            // label1
             // 
-            this.LblPoints.BackColor = System.Drawing.Color.White;
-            this.LblPoints.Font = new System.Drawing.Font("Papyrus", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPoints.Location = new System.Drawing.Point(33, 218);
-            this.LblPoints.Name = "LblPoints";
-            this.LblPoints.Size = new System.Drawing.Size(98, 28);
-            this.LblPoints.TabIndex = 4;
-            this.LblPoints.Text = "0";
-            this.LblPoints.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Papyrus", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(31, 270);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 49);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Reset";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // TxtLives
-            // 
-            this.TxtLives.Location = new System.Drawing.Point(31, 150);
-            this.TxtLives.Name = "TxtLives";
-            this.TxtLives.Size = new System.Drawing.Size(100, 20);
-            this.TxtLives.TabIndex = 6;
-            // 
-            // TxtName
-            // 
-            this.TxtName.Location = new System.Drawing.Point(31, 76);
-            this.TxtName.Name = "TxtName";
-            this.TxtName.Size = new System.Drawing.Size(100, 20);
-            this.TxtName.TabIndex = 7;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(35, 364);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "label1";
             // 
             // Form1
             // 
@@ -205,6 +217,7 @@
         private System.Windows.Forms.TextBox TxtLives;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label LblPoints;
+        private System.Windows.Forms.Label label1;
     }
 }
 
