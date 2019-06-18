@@ -4,11 +4,14 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Resources;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
-namespace WindowsFormsApp3
+namespace StarShip_Troopers
 {
     public partial class Form1 : Form
     {
@@ -30,8 +33,31 @@ namespace WindowsFormsApp3
         public Form1()
         {
             InitializeComponent();
-        }
+            // Secondary image provides as a base for the computer to reference while the image rotates and pixelates 
 
+            OGShipImage = GetResourceByImageName("Ship");
+            OGShipImage.MakeTransparent(Color.Black);
+
+            OGEnemyImage = GetResourceByImageName("Enemy");
+            OGEnemyImage.MakeTransparent(Color.Black);
+
+            OGBulletImage = GetResourceByImageName("Bullet");
+            OGBulletImage.MakeTransparent(Color.Black);
+
+            //create and set the variables for the moving components
+            myShip = new Ship();
+            myShip.X = 50;
+            myShip.Y = 140;
+            myShip.Angle = 0;
+
+        }
+        public Bitmap GetResourceByImageName(string imageName) // collect the resource using its name as a reference
+        {
+            System.Reflection.Assembly asm = System.Reflection.Assembly.GetExecutingAssembly();
+            string resourceName = asm.GetName().Name + ".properties.Resources";
+            var rm = new System.Resources.ResourceManager(resourceName, asm);
+            return (Bitmap)rm.GetObject(imageName);
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
 
