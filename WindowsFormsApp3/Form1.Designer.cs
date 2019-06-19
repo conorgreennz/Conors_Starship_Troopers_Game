@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.startToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,7 +42,7 @@
             this.LblLives = new System.Windows.Forms.Label();
             this.LblName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.TmrGame = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -81,7 +82,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.TxtName);
             this.panel1.Controls.Add(this.TxtLives);
             this.panel1.Controls.Add(this.button1);
@@ -170,15 +170,10 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "StarShip Troopers";
             // 
-            // label1
+            // TmrGame
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 364);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "label1";
+            this.TmrGame.Interval = 50;
+            this.TmrGame.Tick += new System.EventHandler(this.TmrGame_Tick);
             // 
             // Form1
             // 
@@ -217,7 +212,7 @@
         private System.Windows.Forms.TextBox TxtLives;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label LblPoints;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer TmrGame;
     }
 }
 

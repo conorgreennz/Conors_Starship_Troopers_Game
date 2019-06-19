@@ -52,17 +52,14 @@ namespace StarShip_Troopers
             ShipImage = RotateImage(OGShipImage, myShip.Angle);
 
             //Make the enemy list
-            EnemyList = new List<Enemy>;
+            EnemyList = new List<Enemy>();
 
             //make the Bullet List
-            bulletList = new List<Bullet>;
+            bulletList = new List<Bullet>();
 
             //create the enemy and set up the position
             RandomNumber = new Random(); // set it as a random spawn function depending on the angle the enemy is spawned in at 
 
-            //Draw it all on the Picturebox
-            UpdatePositionLabel1();
-            //picturebox1.focus
 
         }
         public Bitmap GetResourceByImageName(string imageName) // collect the resource using its name as a reference
@@ -89,6 +86,19 @@ namespace StarShip_Troopers
 
             return rotatedImage;
         }
+      
+
+        private void TmrGame_Tick(object sender, EventArgs e)
+        {
+          
+        }
+
+        // example stolen from https://stackoverflow.com/questions/709540/capture-multiple-key-downs-in-c-sharp
+        // this enables me to read multiple key presses simultaneously 
+        [DllImport("user32.dll")]
+        public static extern int GetKeyboardState(byte[] keystate);
+        // end of example 
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
