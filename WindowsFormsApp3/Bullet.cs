@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace StarShip_Troopers
 {
-    class Bullet
+    class Missile
     {
         public int X;
         public int Y;

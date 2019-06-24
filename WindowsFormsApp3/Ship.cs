@@ -12,31 +12,31 @@ namespace StarShip_Troopers
         public int Y;
         public int Angle;
 
-        public int ShipMoveRate = 7;
+        public int UserMoveRate = 7;
 
         public void MoveLeft()
         {
-            X -= ShipMoveRate;
+            X -= UserMoveRate;
         }
         public void MoveRight()
         {
-            X += ShipMoveRate;
+            X += UserMoveRate;
         }
         public void MoveUp()
         {
-            Y -= ShipMoveRate;
+            Y -= UserMoveRate;
         }
         public void MoveDown()
         {
-            Y += ShipMoveRate;
+            Y += UserMoveRate;
         }
         public void RotateLeft()
         {
-            Angle -= ShipMoveRate;
+            Angle -= UserMoveRate;
         }
         public void RotateRight()
         {
-            Angle += ShipMoveRate;
+            Angle += UserMoveRate;
         }
     }
 }
