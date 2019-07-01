@@ -51,7 +51,7 @@
     <Compile Include="..\..\..\..\Desktop\StarShip Troopers.Designer.cs">
       <DependentUpon>StarShip Troopers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Bullet.cs" />
+    <Compile Include="Missile.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
